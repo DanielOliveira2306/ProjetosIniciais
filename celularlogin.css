@@ -1,4 +1,6 @@
-@media screen and (min-width: 50px) and (max-width: 700px) {
+@charset "UTF-8";
+
+@media screen and (min-width: 50px) and (max-width: 709px) {
 
 *{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -13,18 +15,14 @@ body{
     background-repeat: no-repeat;
 }
 
-svg{
-    margin: auto;
-    display: block;
-}
-
 header > h2, h3{
-    margin: 0px;
+    margin: auto;
     display: block;
     text-align: center;
     margin-bottom: 16px;
     width: 100%;
     border-bottom: 5px solid black;
+    outline: 0px;
 }
 
 nav{
@@ -33,6 +31,11 @@ nav{
 
 a{
     text-decoration: none;
+}
+
+a:hover{
+    background-color: white;
+    transition: 2s;
 }
 
 main{

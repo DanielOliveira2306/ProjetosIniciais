@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+@media screen and (min-width: 710px) {
+    
+
 *{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
@@ -9,6 +12,7 @@ body{
     background: url(imagens/pexels-souvenirpixels-414612.jpg);
     background-position: center top;
     background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -17,15 +21,34 @@ header > h2{
     margin-left: 100px;
 }
 
-header > h3{
-    margin-right: 40px;
+nav{
+    display: inline-flex;
     float: right;
 }
 
-header > a >  h3{
-    margin-right: 20px;
-    float: right;
+nav > a{
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-left: 50px;
 }
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+  a:hover::before {
+    width: 100%; /* A linha cresce até 100% da largura do link */
+}
+  
 
 h3#cadastro{
     outline-style: groove;
@@ -83,4 +106,5 @@ input#log{
     background-color: black;
     margin-top: 130px;
     width: 100%;
+}
 }
